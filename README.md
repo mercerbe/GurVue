@@ -4,5 +4,6 @@ imgur clone built with VueJs 2.0 using:
 - vuex
 - lodash 
 - axios 
+- Element UI
 
 

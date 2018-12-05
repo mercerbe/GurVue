@@ -12,13 +12,15 @@
     >
       <el-menu-item index="1">GurVue</el-menu-item>
       <el-menu-item index="4" id="login">
-        <a href="https://www.ele.me" target="_blank">Login</a>
+        <a href="#" @click="login">Login</a>
       </el-menu-item>
     </el-menu>
   </div>
 </template>
 
 <script>
+//import actions module from vuex
+import { mapActions } from "vuex";
 export default {
   name: "Header",
   data() {
@@ -30,7 +32,9 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
-    }
+    },
+    //connect an action to the component
+    ...mapActions(["login"]) //...takes all actions from module and adds to object and add other actions
   }
 };
 </script>

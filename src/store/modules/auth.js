@@ -1,3 +1,5 @@
+import api from "../../api/imgur";
+
 //state -- values that will be watched
 const state = {
 	token: null,
@@ -21,4 +23,15 @@ const actions = {
 	logout: ({ commit }) => {
 		commit("setToken", null);
 	},
+	login: () => {
+		api.login();
+	},
+};
+
+//export - again, identical key/value names can be exported as one word
+export default {
+	state,
+	getters,
+	mutations,
+	actions,
 };

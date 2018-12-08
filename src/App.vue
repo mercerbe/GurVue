@@ -1,27 +1,21 @@
 <template>
-  <div class="main">
-    <Header></Header>
-    <router-view></router-view>
-    <Footer></Footer>
+  <div>
+    <AppHeader/>
+    <div class="ui container">
+      <router-view/>
+    </div>
+    <AppFooter/>
   </div>
 </template>
 
-
 <script>
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import AppHeader from "./components/AppHeader";
+import AppFooter from "./components/AppFooter";
 export default {
   name: "App",
   components: {
-    Header,
-    Footer
+    AppHeader,
+    AppFooter
   }
 };
 </script>
-
-<style scoped>
-.main {
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-}
-</style>

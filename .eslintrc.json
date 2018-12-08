@@ -1,0 +1,32 @@
+{
+    "extends": [
+        "plugin:vue/recommended",
+        "plugin:prettier/recommended",
+        "eslint:recommended"
+    ],
+    "root": true,
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "linebreak-style": 0,
+        "react/prefer-stateless-function": 0,
+        "react/jsx-filename-extension": 0,
+        "import/first": 0,
+        "react/jsx-indent": 0,
+        "comma-dangle": 0,
+        "react/prop-types": 0,
+        "padded-blocks": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "class-methods-use-this": 0,
+        "jsx-a11y/label-has-for": 0,
+        "jsx-a11y/alt-text": 0,
+        "import/prefer-default-export": 0,
+        "no-console": 0,
+        "vue/require-default-prop": 0,
+        "vue/max-attributes-per-line": 0
+    },
+    "parserOptions": {
+        "parser": "babel-eslint"
+    }
+}

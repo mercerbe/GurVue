@@ -1,22 +1,14 @@
 <template>
-  <div>
-    <div>please wait...</div>
-  </div>
+  <div>Please Wait...</div>    
 </template>
 
 <script>
 import { mapActions } from "vuex";
 export default {
   name: "AuthHandler",
-  methods: {
-    ...mapActions(["finalizeLogin"]),
-    created() {
-      this.finalizeLogin(window.location.hash);
-    }
-  }
+  created() {
+    this.finalizeLogin(window.location.hash);
+  },
+  methods: mapActions(["finalizeLogin"])
 };
 </script>
-
-<style scoped>
-</style>
-

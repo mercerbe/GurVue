@@ -15,9 +15,10 @@ Vue.use(ElementUI);
 
 //init router instance
 const router = new VueRouter({
+	mode: "history",
 	routes: [
 		//if specified path is hit, call component
-		{ path: "oauth2/callback", component: AuthHandler },
+		{ path: "/oauth2/callback", component: AuthHandler },
 	],
 });
 

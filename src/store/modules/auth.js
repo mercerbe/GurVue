@@ -1,4 +1,5 @@
 import api from "../../api/imgur";
+import qs from "qs";
 
 //state -- values that will be watched
 const state = {
@@ -25,6 +26,10 @@ const actions = {
 	},
 	login: () => {
 		api.login();
+	},
+	finalizeLogin: ({ commit }, hash) => {
+		const query = qs.parse(hash.replace("#", ""));
+		commit("setToken", query.acces_token);
 	},
 };
 

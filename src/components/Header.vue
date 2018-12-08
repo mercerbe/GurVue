@@ -11,8 +11,9 @@
       active-text-color="#ffd04b"
     >
       <el-menu-item index="1">GurVue</el-menu-item>
+      {{isLoggedIn}}
       <el-menu-item index="4" id="login">
-        <a href="#" @click="login">Login</a>
+        <a @click="login">Login</a>
       </el-menu-item>
     </el-menu>
   </div>
@@ -20,7 +21,7 @@
 
 <script>
 //import actions module from vuex
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 export default {
   name: "Header",
   data() {
@@ -28,6 +29,9 @@ export default {
       activeIndex: "1",
       activeIndex2: "1"
     };
+  },
+  computed: {
+    ...mapGetters(["isLoggedIn"])
   },
   methods: {
     handleSelect(key, keyPath) {

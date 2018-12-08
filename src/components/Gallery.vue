@@ -1,11 +1,19 @@
 <template>
-  <div v-if="isLoggedIn" class="image-container">
-    <img v-for="image in allImages" :key="image.link" :src="image.link">
+  <div>
+    <h3 v-if="isLoggedIn" class="ui center aligned header">Welcome!</h3>
+    <div v-if="isLoggedIn" class="image-container">
+      <img
+        v-for="image in allImages"
+        :key="image.link"
+        :src="image.link"
+        class="ui medium rounded image"
+      >
+    </div>
+    <h2 v-else class="ui center aligned icon header">
+      <i class="images outline icon"></i>
+      Log In to Begin
+    </h2>
   </div>
-  <h2 v-else class="ui center aligned icon header inverted">
-    <i class="images outline icon"></i>
-    Log In to Begin
-  </h2>
 </template>
 
 <script>
@@ -25,19 +33,9 @@ export default {
   column-count: 3;
   column-gap: 0;
 }
-h2 {
-  background: #141e30; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #243b55,
-    #141e30
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #243b55,
-    #141e30
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: whitesmoke;
+h3 {
+  width: 100vw;
+  text-align: center;
 }
 
 img {

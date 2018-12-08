@@ -27,9 +27,9 @@ const actions = {
 	login: () => {
 		api.login();
 	},
-	finalizeLogin: ({ commit }, hash) => {
+	finalizeLogin({ commit }, hash) {
 		const query = qs.parse(hash.replace("#", ""));
-		commit("setToken", query.acces_token);
+		commit("setToken", query.access_token);
 	},
 };
 

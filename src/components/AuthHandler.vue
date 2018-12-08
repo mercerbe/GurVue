@@ -8,9 +8,11 @@
 import { mapActions } from "vuex";
 export default {
   name: "AuthHandler",
-  ...mapActions(["finalizeLogin"]),
-  created() {
-    this.finalizeLogin(window.location.hash);
+  methods: {
+    ...mapActions(["finalizeLogin"]),
+    created() {
+      this.finalizeLogin(window.location.hash);
+    }
   }
 };
 </script>
